@@ -4,4 +4,12 @@ from django.shortcuts import render
 
 
 def index_view(request):
-    return render(request, "website/index.html")
+    content = {
+        "name": "Saba",
+        "last_name": "Shafiee",
+        "my_job": "Computer vision engineer",
+    }
+    return render(request, "website/index.html", context=content)
+
+
+# index.html line 9
